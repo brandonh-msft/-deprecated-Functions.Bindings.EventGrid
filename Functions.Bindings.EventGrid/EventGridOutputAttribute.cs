@@ -1,0 +1,35 @@
+﻿using System;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Description;
+
+namespace Functions.Bindings.EventGrid
+{
+    /// <summary></summary>
+    /// <seealso cref="System.Attribute" />
+    [AttributeUsage(validOn: AttributeTargets.ReturnValue | AttributeTargets.Parameter)]
+    [Binding]
+    public sealed class EventGridOutputAttribute : Attribute
+    {
+#pragma warning disable CS0618 // Type or member is obsolete
+        /// <summary>
+        /// Gets or sets the topic endpoint setting.
+        /// </summary>
+        /// <value>
+        /// The topic endpoint setting.
+        /// </value>
+        [AppSetting]
+#pragma warning restore CS0618 // Type or member is obsolete
+        public string TopicEndpointSetting { get; set; }
+
+#pragma warning disable CS0618 // Type or member is obsolete
+        /// <summary>
+        /// Gets or sets the sas key setting.
+        /// </summary>
+        /// <value>
+        /// The sas key setting.
+        /// </value>
+        [AppSetting]
+#pragma warning restore CS0618 // Type or member is obsolete
+        public string SasKeySetting { get; set; }
+    }
+}
