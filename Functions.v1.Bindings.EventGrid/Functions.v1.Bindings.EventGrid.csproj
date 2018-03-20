@@ -136,10 +136,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventGridConfiguration.cs" />
-    <Compile Include="EventGridOutput.cs" />
-    <Compile Include="EventGridOutputAsyncCollector.cs" />
-    <Compile Include="EventGridOutputAttribute.cs" />
+    <Compile Include="..\Functions.Bindings.EventGrid\EventGridConfiguration.cs">
+      <Link>EventGridConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Functions.Bindings.EventGrid\EventGridOutput.cs">
+      <Link>EventGridOutput.cs</Link>
+    </Compile>
+    <Compile Include="..\Functions.Bindings.EventGrid\EventGridOutputAsyncCollector.cs">
+      <Link>EventGridOutputAsyncCollector.cs</Link>
+    </Compile>
+    <Compile Include="..\Functions.Bindings.EventGrid\EventGridOutputAttribute.cs">
+      <Link>EventGridOutputAttribute.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

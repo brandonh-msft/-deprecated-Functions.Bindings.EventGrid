@@ -10,7 +10,7 @@ namespace TestFunction.v2
     public static class Function1
     {
         [FunctionName("Function1")]
-        public static async System.Threading.Tasks.Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]HttpRequest req, [EventGridOutput(TopicEndpointSetting = @"topicEndpoint", SasKeySetting = @"sasKey")]IAsyncCollector<EventGridOutput> events, TraceWriter log)
+        public static async System.Threading.Tasks.Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]HttpRequest req, [EventGridOutput(TopicEndpoint = @"topicEndpoint", SasKey = @"sasKey")]IAsyncCollector<EventGridOutput> events, TraceWriter log)
         {
             log.Info("C# HTTP trigger function processed a request.");
 

@@ -19,7 +19,7 @@ namespace Functions.Bindings.EventGrid
         /// </value>
         [AppSetting]
 #pragma warning restore CS0618 // Type or member is obsolete
-        public string TopicEndpointSetting { get; set; }
+        public string TopicEndpoint { get; set; }
 
 #pragma warning disable CS0618 // Type or member is obsolete
         /// <summary>
@@ -30,6 +30,6 @@ namespace Functions.Bindings.EventGrid
         /// </value>
         [AppSetting]
 #pragma warning restore CS0618 // Type or member is obsolete
-        public string SasKeySetting { get; set; }
+        public string SasKey { get; set; }
     }
 }

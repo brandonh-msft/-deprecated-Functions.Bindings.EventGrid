@@ -21,10 +21,10 @@ namespace Functions.Bindings.EventGrid
         {
             if (_httpClient.DefaultRequestHeaders.Contains(@"aeg-sas-key"))
                 _httpClient.DefaultRequestHeaders.Remove(@"aeg-sas-key");
-            _httpClient.DefaultRequestHeaders.Add(@"aeg-sas-key", _attribute.SasKeySetting);
+            _httpClient.DefaultRequestHeaders.Add(@"aeg-sas-key", _attribute.SasKey);
 
 
-            var response = await _httpClient.PostAsJsonAsync(_attribute.TopicEndpointSetting, new[] { item });
+            var response = await _httpClient.PostAsJsonAsync(_attribute.TopicEndpoint, new[] { item });
             response.EnsureSuccessStatusCode();
         }
 

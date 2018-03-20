@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "TestFunction.v2": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "commandLineArgs": "\"C:\\Users\\hurlburb\\AppData\\Local\\Azure.Functions.V2.Cli\\2.0.1-beta.22\\Azure.Functions.Cli.dll\" host start"
+    }
+  }
+}
