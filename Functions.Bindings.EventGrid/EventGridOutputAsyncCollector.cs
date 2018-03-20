@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
+using Newtonsoft.Json.Linq;
 
 namespace Functions.Bindings.EventGrid
 {
@@ -24,7 +25,7 @@ namespace Functions.Bindings.EventGrid
             _httpClient.DefaultRequestHeaders.Add(@"aeg-sas-key", _attribute.SasKey);
 
 
-            var response = await _httpClient.PostAsJsonAsync(_attribute.TopicEndpoint, new[] { item });
+            var response = await _httpClient.PostAsync(_attribute.TopicEndpoint, new StringContent(new JArray(JObject.FromObject(item)).ToString(), System.Text.Encoding.Default, @"application/json"));
             response.EnsureSuccessStatusCode();
         }
 
