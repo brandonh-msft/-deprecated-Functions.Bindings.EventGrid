@@ -1,12 +1,2 @@
-# local.settings.json expected content
-```
-{
-  "IsEncrypted": false,
-  "Values": {
-    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-    "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
-    "topicEndpoint": "<event grid topic endpoint url>",
-    "sasKey": "<event grid topic SAS key>"
-  }
-}
-```
+# MOVED
+Happy to report the work here has been [pulled into the official Event Grid binding](https://github.com/Azure/azure-functions-eventgrid-extension/pull/38)
